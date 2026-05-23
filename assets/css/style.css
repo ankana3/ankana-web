@@ -1,1 +1,30 @@
+/* ========= RESET ========= */
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========= VARIABLES ========= */
+
+:root{
+
+    --ocre: #D8A15D;
+    --cafe: #4B2E1D;
+    --beige: #F7E8D4;
+    --blanco: #ffffff;
+
+}
+
+
+/* ========= BODY ========= */
+
+body{
+
+    background-color: var(--beige);
+    color: var(--cafe);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
