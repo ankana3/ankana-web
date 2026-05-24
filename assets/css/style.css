@@ -37,11 +37,11 @@ header{
 
     width: 100%;
 
-    padding: 28px 8%;
+    padding: 38px 8%;
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     background-color: var(--beige);
 
@@ -72,8 +72,6 @@ header{
     flex-direction: column;
     align-items: flex-end;
 
-    gap: 14px;
-
 }
 
 
@@ -81,10 +79,14 @@ header{
 
 .slogan{
 
-    font-size: 0.95rem;
-    letter-spacing: 1px;
+    font-size: 1.05rem;
 
-    color: rgba(75, 46, 29, 0.8);
+    letter-spacing: 2px;
+    line-height: 1.6;
+
+    color: rgba(75, 46, 29, 0.78);
+
+    margin-bottom: 30px;
 
 }
 
@@ -96,7 +98,7 @@ nav ul{
     display: flex;
     align-items: center;
 
-    gap: 42px;
+    gap: 56px;
 
     list-style: none;
 
@@ -111,8 +113,9 @@ nav a{
 
     color: var(--cafe);
 
-    font-size: 1rem;
-    letter-spacing: 1px;
+    font-size: 0.92rem;
+
+    letter-spacing: 2px;
 
     transition: 0.3s ease;
 
@@ -121,9 +124,6 @@ nav a{
 
 nav a:hover{
 
-    color: var(--ocre);
-
-}
     color: var(--ocre);
 
 }
