@@ -39,7 +39,7 @@ body{
 header{
 
     width: 100%;
-    min-height: 320px;
+    min-height: 310px;
 
     padding: 24px 6%;
 
@@ -48,7 +48,7 @@ header{
     align-items: flex-end;
 
     background-image: url("../img/logo/logo-header.png");
-    background-size: 94;
+    background-size: cover;
     background-position: center;
 
     position: relative;
