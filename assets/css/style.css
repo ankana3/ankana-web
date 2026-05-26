@@ -37,7 +37,7 @@ header{
 
     width: 100%;
 
-    padding: 32px 8%;
+    padding: 18px 6%;
 
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,7 @@ header{
 
 .logo img{
 
-    width: 260px;
+    width: 520px;
     height: auto;
 
     display: block;
@@ -75,14 +75,14 @@ header{
 
 .slogan{
 
-    font-size: 1.05rem;
+    font-size: 1rem;
 
     letter-spacing: 2px;
     line-height: 1.6;
 
     color: rgba(247, 232, 212, 0.88);
 
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 
 }
 
@@ -94,7 +94,7 @@ nav ul{
     display: flex;
     align-items: center;
 
-    gap: 56px;
+    gap: 48px;
 
     list-style: none;
 
