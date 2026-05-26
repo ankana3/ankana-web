@@ -35,19 +35,22 @@ body{
 header{
 
     width: 100%;
-    min-height: 320px;
+    min-height: 420px;
 
-    padding: 28px 6% 18px;
+    padding: 42px 6% 34px;
 
     display: flex;
     justify-content: space-between;
     align-items: stretch;
 
     background-image: url("../img/logo/logo-header.png");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 
     position: relative;
+
+    overflow: hidden;
 
 }
 
@@ -62,7 +65,7 @@ header::before{
 
     inset: 0;
 
-    background: rgba(25, 15, 10, 0.12);
+    background: rgba(25, 15, 10, 0.10);
 
 }
 
@@ -82,7 +85,7 @@ header::before{
 
 .logo{
 
-    width: 50%;
+    width: 52%;
 
 }
 
@@ -93,11 +96,10 @@ header::before{
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
 
-    padding-top: 8px;
-    padding-bottom: 2px;
+    width: 42%;
 
 }
 
@@ -108,14 +110,14 @@ header::before{
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 1.45rem;
+    font-size: 1.55rem;
 
     letter-spacing: 3px;
-    line-height: 1.6;
+    line-height: 1.5;
 
     color: rgba(247, 232, 212, 0.95);
 
-    margin-bottom: 135px;
+    margin-bottom: 42px;
 
     text-align: right;
 
@@ -124,12 +126,21 @@ header::before{
 
 /* ========= NAV ========= */
 
+nav{
+
+    width: 100%;
+
+}
+
+
 nav ul{
 
     display: flex;
+    justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;
 
-    gap: 18px;
+    gap: 16px;
 
     list-style: none;
 
@@ -146,9 +157,9 @@ nav a{
 
     font-size: 0.92rem;
 
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 
-    padding: 14px 24px;
+    padding: 14px 22px;
 
     border: 1px solid rgba(247, 232, 212, 0.35);
 
@@ -157,6 +168,12 @@ nav a{
     transition: 0.35s ease;
 
     backdrop-filter: blur(4px);
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 120px;
 
 }
 
