@@ -49,6 +49,7 @@ header{
 
     background-image: url("../img/logo/logo-header.png");
     background-size: 96%;
+    background-repeat: no-repeat;
     background-position: center;
 
     position: relative;
@@ -86,6 +87,8 @@ header::before{
     flex-direction: column;
     align-items: flex-end;
 
+    padding-top: 10px;
+
 }
 
 
@@ -102,7 +105,9 @@ header::before{
 
     color: var(--dorado);
 
-    margin-bottom: 28px;
+    margin-bottom: 42px;
+
+    margin-top: -18px;
 
     text-align: right;
 
