@@ -39,9 +39,10 @@ body{
 header{
 
     width: 100%;
-    min-height: 300px;
 
-    padding: 8px 6% 24px;
+    min-height: 260px;
+
+    padding: 24px 6%;
 
     display: flex;
     justify-content: flex-end;
@@ -49,7 +50,7 @@ header{
 
     background-image: url("../img/logo/logo-header.png");
 
-    background-size: 95%;
+    background-size: cover;
 
     background-position: center;
 
@@ -82,6 +83,7 @@ header::before{
 .header-right{
 
     position: relative;
+
     z-index: 2;
 
     width: 43%;
@@ -102,6 +104,7 @@ header::before{
     font-size: 1.45rem;
 
     letter-spacing: 2px;
+
     line-height: 1.4;
 
     color: var(--dorado);
@@ -118,7 +121,9 @@ header::before{
 nav ul{
 
     display: flex;
+
     justify-content: flex-end;
+
     align-items: center;
 
     gap: 12px;
@@ -153,7 +158,9 @@ nav a{
     min-width: 102px;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
 }
