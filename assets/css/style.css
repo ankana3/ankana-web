@@ -47,8 +47,10 @@ header{
     justify-content: flex-end;
     align-items: flex-end;
 
+    background-color: #2B1E18;
+
     background-image: url("../img/logo/logo-header.png");
-    background-size: 96%;
+    background-size: 95%;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -105,9 +107,8 @@ header::before{
 
     color: var(--dorado);
 
-    margin-bottom: 42px;
-
     margin-top: -18px;
+    margin-bottom: 42px;
 
     text-align: right;
 
