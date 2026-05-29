@@ -51,7 +51,7 @@ header{
     background-image: url("../img/logo/logo-header.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: left top;
 
     position: relative;
 
