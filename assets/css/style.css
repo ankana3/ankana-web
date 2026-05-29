@@ -114,7 +114,11 @@ header::before{
 
 
 /* ========= NAV ========= */
+nav{
 
+    margin-top: 18px;
+
+}
 nav ul{
 
     display: flex;
