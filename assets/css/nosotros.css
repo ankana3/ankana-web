@@ -1,1 +1,309 @@
+/* ==========================================
+   PÁGINA NOSOTROS - ANKANA
+========================================== */
 
+.nosotros {
+
+    background: linear-gradient(
+        180deg,
+        #efe2c2 0%,
+        #f5ebd7 100%
+    );
+
+    padding: 80px 0;
+}
+
+
+/* ==========================================
+   BLOQUES PRINCIPALES
+========================================== */
+
+.bloque-nosotros {
+
+    max-width: 1200px;
+
+    margin: 0 auto 120px auto;
+
+    padding: 0 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.bloque-nosotros.invertido {
+
+    flex-direction: row-reverse;
+}
+
+
+/* ==========================================
+   TEXTO
+========================================== */
+
+.bloque-nosotros .texto {
+
+    flex: 1;
+}
+
+.bloque-nosotros h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 2.5rem;
+
+    font-weight: bold;
+
+    color: #4B2E1D;
+
+    margin-bottom: 30px;
+
+    line-height: 1.2;
+}
+
+.bloque-nosotros p {
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 1.08rem;
+
+    line-height: 1.9;
+
+    color: #5b4537;
+
+    margin-bottom: 20px;
+
+    text-align: justify;
+}
+
+
+/* ==========================================
+   IMÁGENES
+========================================== */
+
+.bloque-nosotros .imagen {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.bloque-nosotros .imagen img {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(75, 46, 29, 0.18);
+
+    transition: transform .4s ease;
+}
+
+.bloque-nosotros .imagen img:hover {
+
+    transform: translateY(-6px);
+}
+
+
+/* ==========================================
+   CIERRE
+========================================== */
+
+.cierre {
+
+    max-width: 900px;
+
+    margin: 0 auto 120px auto;
+
+    padding: 0 40px;
+
+    text-align: center;
+}
+
+.cierre h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 3rem;
+
+    color: #4B2E1D;
+
+    margin-bottom: 40px;
+}
+
+.cierre p {
+
+    font-family: "Segoe UI", sans-serif;
+
+    font-size: 1.1rem;
+
+    line-height: 2;
+
+    color: #5b4537;
+
+    margin-bottom: 25px;
+}
+
+.invitacion {
+
+    font-weight: 600;
+
+    color: #4B2E1D;
+}
+
+
+/* ==========================================
+   CONTACTO
+========================================== */
+
+.contacto-nosotros {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 0 40px 80px;
+
+    text-align: center;
+}
+
+.imagen-contacto img {
+
+    width: 100%;
+
+    max-width: 550px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(75, 46, 29, 0.18);
+
+    margin-bottom: 40px;
+}
+
+.mensaje-contacto {
+
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    font-size: 1.1rem;
+
+    line-height: 1.9;
+
+    color: #5b4537;
+}
+
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.botones-contacto {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
+}
+
+.btn-ankana {
+
+    background: #E4B14A;
+
+    color: #4B2E1D;
+
+    text-decoration: none;
+
+    padding: 14px 30px;
+
+    border-radius: 40px;
+
+    font-weight: 600;
+
+    transition: all .3s ease;
+}
+
+.btn-ankana:hover {
+
+    background: #4B2E1D;
+
+    color: #E4B14A;
+}
+
+
+/* ==========================================
+   ICONOS
+========================================== */
+
+.iconos-contacto {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.iconos-contacto img {
+
+    width: 42px;
+
+    height: 42px;
+
+    object-fit: contain;
+
+    transition: transform .3s ease;
+}
+
+.iconos-contacto img:hover {
+
+    transform: scale(1.12);
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .bloque-nosotros,
+    .bloque-nosotros.invertido {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .bloque-nosotros p {
+
+        text-align: left;
+    }
+
+    .bloque-nosotros h2 {
+
+        font-size: 2rem;
+    }
+
+    .cierre h2 {
+
+        font-size: 2.3rem;
+    }
+}
