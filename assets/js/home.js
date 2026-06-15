@@ -1,32 +1,109 @@
-const track = document.querySelector('.carousel-track');
-const container = document.querySelector('.carousel-container');
+const carousel = document.querySelector('.carousel-3d');
+const items = document.querySelectorAll('.carousel-item');
+const wrapper = document.querySelector('.carousel-3d-wrapper');
 
-let speed = 0.4;
-let position = 0;
-let animation;
+const totalItems = items.length;
 
-function animateCarousel() {
+let angle = 0;
+let radius = 520;
+let animationId;
+let isPaused = false;
 
-    position -= speed;
+function updateCarousel() {
 
-    const halfWidth = track.scrollWidth / 2;
+items.forEach((item, index) => {
 
-    if (Math.abs(position) >= halfWidth) {
-        position = 0;
+    const itemAngle = ((360 / totalItems) * index) + angle;
+
+    const radians = itemAngle * (Math.PI / 180);
+
+    const z = Math.cos(radians) * radius;
+    const x = Math.sin(radians) * radius;
+
+    const scale = ((z + radius) / (radius * 2)) * 0.55 + 0.45;
+
+    const opacity = ((z + radius) / (radius * 2)) * 0.75 + 0.25;
+
+    item.style.transform = `
+        translateX(${x}px)
+        translateZ(${z}px)
+        scale(${scale})
+    `;
+
+    item.style.opacity = opacity;
+    item.style.zIndex = Math.round(z);
+
+    if (z > radius * 0.75) {
+
+        item.classList.add('front-item');
+
+    } else {
+
+        item.classList.remove('front-item');
+
     }
 
-    track.style.transform = `translateX(${position}px)`;
+});
 
-    animation = requestAnimationFrame(animateCarousel);
 }
 
-animateCarousel();
+function animate() {
 
+if (!isPaused) {
 
-container.addEventListener('mouseenter', () => {
-    cancelAnimationFrame(animation);
+    angle += 0.12;
+
+    updateCarousel();
+
+}
+
+animationId = requestAnimationFrame(animate);
+
+}
+
+updateCarousel();
+animate();
+
+wrapper.addEventListener('mouseenter', () => {
+
+isPaused = true;
+
 });
 
-container.addEventListener('mouseleave', () => {
-    animateCarousel();
+wrapper.addEventListener('mouseleave', () => {
+
+isPaused = false;
+
 });
+
+window.addEventListener('resize', () => {
+
+if (window.innerWidth < 768) {
+
+    radius = 320;
+
+} else if (window.innerWidth < 1200) {
+
+    radius = 420;
+
+} else {
+
+    radius = 520;
+
+}
+
+updateCarousel();
+
+});
+
+if (window.innerWidth < 768) {
+
+radius = 320;
+
+} else if (window.innerWidth < 1200) {
+
+radius = 420;
+
+}
+
+updateCarousel();
