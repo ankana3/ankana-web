@@ -3,97 +3,129 @@ HOME ANKANA
 ========================================== */
 
 /* ==========================================
-HERO / CARRUSEL
+HERO 3D
 ========================================== */
 
 .hero-home{
 
-width: 100%;
+width:100%;
 
-padding: 50px 0 90px;
+padding:40px 0 120px;
 
-overflow: hidden;
+overflow;
 
-}
+perspective:1800px;
 
-.carousel-container{
-
-width: 100%;
-
-overflow: hidden;
-
-position: relative;
+position;
 
 }
 
-.carousel-track{
+.carousel-3d-wrapper{
 
-display: flex;
+width:100%;
 
-gap: 28px;
+height:620px;
 
-width: max-content;
+display;
 
-animation: carrusel 65s linear infinite;
+justify-content;
+
+align-items;
+
+position;
+
+overflow;
 
 }
 
-.carousel-track{
+.carousel-spotlight{
 
-animation-play-state: paused;
+position;
+
+width:500px;
+
+height:500px;
+
+border-radius:50%;
+
+background(
+circle,
+rgba(214,166,106,.30) 0%,
+rgba(214,166,106,.12) 35%,
+transparent 75%
+);
+
+filter(35px);
+
+pointer-events;
+
+z-index:1;
 
 }
 
-.carousel-track img{
+.carousel-3d{
 
-width: 320px;
+position;
 
-height: 430px;
+width:100%;
 
-object-fit: cover;
+height:520px;
 
-border-radius: 16px;
+transform-style;
 
-box-shadow:
-    0 15px 35px rgba(43,30,24,.15);
+display;
+
+justify-content;
+
+align-items;
+
+}
+
+.carousel-item{
+
+position;
+
+width:320px;
+
+height:430px;
 
 transition:
-    transform .45s ease,
-    box-shadow .45s ease,
-    filter .45s ease;
+transform .8s ease,
+filter .8s ease,
+opacity .8s ease;
 
-cursor: pointer;
+cursor;
 
 }
 
-.carousel-track img{
+.carousel-item img{
 
-transform: scale(1.08);
+width:100%;
+
+height:100%;
+
+object-fit;
+
+border-radius:18px;
 
 box-shadow:
-    0 20px 50px rgba(43,30,24,.22);
+0 20px 50px rgba(43,30,24,.18);
 
-filter: brightness(1.08);
-
-}
-
-.carousel-track img::after{
-
-content: "";
+transition:
+transform .45s ease,
+box-shadow .45s ease,
+filter .45s ease;
 
 }
 
-@keyframes carrusel{
+.carousel-item img{
 
-from{
+transform(1.06);
 
-    transform: translateX(0);
-}
+filter(1.08);
 
-to{
-
-    transform: translateX(-50%);
-}
+box-shadow:
+0 30px 70px rgba(43,30,24,.28);
 
 }
 
@@ -103,45 +135,45 @@ TEXTO EDITORIAL
 
 .intro-home{
 
-padding: 0 8% 100px;
+padding:0 8% 100px;
 
 }
 
 .intro-container{
 
-max-width: 950px;
+max-width:950px;
 
-margin: 0 auto;
+margin:0 auto;
 
-text-align: center;
+text-align;
 
 }
 
 .intro-container h1{
 
-font-family: 'Marcellus', serif;
+font-family:'Marcellus', serif;
 
-font-size: 2.8rem;
+font-size:2.8rem;
 
-color: var(--cafe);
+color(--cafe);
 
-margin-bottom: 30px;
+margin-bottom:30px;
 
-line-height: 1.3;
+line-height:1.3;
 
 }
 
 .intro-container p{
 
-max-width: 850px;
+max-width:850px;
 
-margin: 0 auto;
+margin:0 auto;
 
-font-size: 1.08rem;
+font-size:1.08rem;
 
-line-height: 2;
+line-height:2;
 
-color: #5b4537;
+color:#5b4537;
 
 }
 
@@ -151,120 +183,119 @@ TARJETAS EDITORIALES
 
 .editorial-section{
 
-width: 88%;
+width:88%;
 
-margin: 0 auto;
+margin:0 auto;
 
-display: grid;
+display;
 
-grid-template-columns: repeat(3,1fr);
+grid-template-columns(3,1fr);
 
-gap: 30px;
+gap:30px;
 
-padding-bottom: 120px;
+padding-bottom:120px;
 
 }
 
 .editorial-card{
 
-position: relative;
+position;
 
-overflow: hidden;
+overflow;
 
-border-radius: 20px;
+border-radius:20px;
 
-text-decoration: none;
+text-decoration;
 
 box-shadow:
-    0 15px 40px rgba(43,30,24,.12);
+0 15px 40px rgba(43,30,24,.12);
 
 }
 
 .editorial-card img{
 
-width: 100%;
+width:100%;
 
-height: 500px;
+height:500px;
 
-object-fit: cover;
+object-fit;
 
-transition:
-    transform .6s ease;
+transition .6s ease;
 
 }
 
 .editorial-card img{
 
-transform: scale(1.08);
+transform(1.08);
 
 }
 
 .overlay{
 
-position: absolute;
+position;
 
-inset: 0;
+inset:0;
 
 background:
-    linear-gradient(
-        to top,
-        rgba(43,30,24,.85),
-        rgba(43,30,24,.15)
-    );
+linear-gradient(
+to top,
+rgba(43,30,24,.85),
+rgba(43,30,24,.15)
+);
 
-display: flex;
+display;
 
-flex-direction: column;
+flex-direction;
 
-justify-content: flex-end;
+justify-content;
 
-padding: 35px;
+padding:35px;
 
 }
 
 .overlay h2{
 
-font-family: 'Marcellus', serif;
+font-family:'Marcellus', serif;
 
-font-size: 2rem;
+font-size:2rem;
 
-color: white;
+color;
 
-margin-bottom: 12px;
+margin-bottom:12px;
 
 }
 
 .overlay p{
 
-color: rgba(255,255,255,.92);
+color(255,255,255,.92);
 
-line-height: 1.8;
+line-height:1.8;
 
-margin-bottom: 20px;
+margin-bottom:20px;
 
 }
 
 .overlay span{
 
-display: inline-flex;
+display;
 
-align-items: center;
+align-items;
 
-justify-content: center;
+justify-content;
 
-width: fit-content;
+width;
 
-padding: 12px 24px;
+padding:12px 24px;
 
-border-radius: 999px;
+border-radius:999px;
 
-background: var(--dorado);
+background(--dorado);
 
-color: var(--cafe);
+color(--cafe);
 
-font-size: .9rem;
+font-size:.9rem;
 
-font-weight: 600;
+font-weight:600;
 
 }
 
@@ -274,52 +305,51 @@ REDES
 
 .home-social{
 
-text-align: center;
+text-align;
 
-padding: 0 20px 120px;
+padding:0 20px 120px;
 
 }
 
 .home-social p{
 
-font-family: 'Marcellus', serif;
+font-family:'Marcellus', serif;
 
-font-size: 1.5rem;
+font-size:1.5rem;
 
-color: var(--cafe);
+color(--cafe);
 
-margin-bottom: 35px;
+margin-bottom:35px;
 
 }
 
 .social-icons{
 
-display: flex;
+display;
 
-justify-content: center;
+justify-content;
 
-gap: 30px;
+gap:30px;
 
-flex-wrap: wrap;
-
-}
-
-.social-icons img{
-
-width: 70px;
-
-height: 70px;
-
-object-fit: contain;
-
-transition:
-    transform .35s ease;
+flex-wrap;
 
 }
 
 .social-icons img{
 
-transform: scale(1.12);
+width:70px;
+
+height:70px;
+
+object-fit;
+
+transition .35s ease;
+
+}
+
+.social-icons a img{
+
+transform(1.12);
 
 }
 
@@ -327,51 +357,74 @@ transform: scale(1.12);
 RESPONSIVE
 ========================================== */
 
-@media(max-width: 1000px){
+@media(max-width:1000px){
 
 .editorial-section{
 
-    grid-template-columns: 1fr;
+grid-template-columns:1fr;
 
-    width: 92%;
+width:92%;
+
 }
 
 .editorial-card img{
 
-    height: 420px;
+height:420px;
+
 }
 
 .intro-container h1{
 
-    font-size: 2.2rem;
+font-size:2.2rem;
+
+}
+
+.carousel-item{
+
+width:260px;
+
+height:360px;
+
 }
 
 }
 
-@media(max-width: 768px){
-
-.carousel-track img{
-
-    width: 240px;
-
-    height: 330px;
-}
+@media(max-width:768px){
 
 .intro-container h1{
 
-    font-size: 1.9rem;
+font-size:1.9rem;
+
 }
 
 .home-social p{
 
-    font-size: 1.2rem;
+font-size:1.2rem;
+
 }
 
 .social-icons img{
 
-    width: 55px;
+width:55px;
 
-    height: 55px;
+height:55px;
+
+}
+
+.carousel-3d-wrapper{
+
+height:500px;
+
+}
+
+.carousel-item{
+
+width:210px;
+
+height:300px;
+
+}
+
 }
 
 }
