@@ -4,7 +4,6 @@ const wrapper = document.querySelector('.carousel-3d-wrapper');
 
 let rotation = 0;
 let paused = false;
-let animationId;
 
 function updateCarousel() {
 
@@ -16,15 +15,17 @@ items.forEach((item, index) => {
 
     const rad = angle * Math.PI / 180;
 
-    const curveRadius = 520;
+    const radius = 600;
 
-    const x = Math.sin(rad) * curveRadius;
+    const x = Math.sin(rad) * radius;
 
     const depth = Math.cos(rad);
 
-    const scale = 0.55 + ((depth + 1) / 2) * 0.55;
+    const scale = 0.45 + ((depth + 1) / 2) * 0.65;
 
-    const opacity = 0.20 + ((depth + 1) / 2) * 0.80;
+    const opacity = 0.15 + ((depth + 1) / 2) * 0.85;
+
+    const brightness = 0.55 + ((depth + 1) / 2) * 0.55;
 
     item.style.left = "50%";
     item.style.top = "50%";
@@ -39,9 +40,17 @@ items.forEach((item, index) => {
 
     item.style.zIndex = Math.round(scale * 100);
 
-    item.style.filter = `
-        brightness(${0.7 + (depth + 1) * 0.25})
-    `;
+    item.style.filter = `brightness(${brightness})`;
+
+    if (depth > 0.92) {
+
+        item.classList.add('active-card');
+
+    } else {
+
+        item.classList.remove('active-card');
+
+    }
 
 });
 
@@ -51,13 +60,13 @@ function animate() {
 
 if (!paused) {
 
-    rotation += 0.12;
+    rotation += 0.08;
 
     updateCarousel();
 
 }
 
-animationId = requestAnimationFrame(animate);
+requestAnimationFrame(animate);
 
 }
 
@@ -73,7 +82,25 @@ paused = false;
 
 });
 
-window.addEventListener('resize', updateCarousel);
+items.forEach(item => {
+
+item.addEventListener('mouseenter', () => {
+
+    item.style.zIndex = "999";
+
+    item.style.transform += " scale(1.12)";
+
+    item.style.filter = "brightness(1.15)";
+
+});
+
+item.addEventListener('mouseleave', () => {
+
+    updateCarousel();
+
+});
+
+});
 
 updateCarousel();
 animate();
