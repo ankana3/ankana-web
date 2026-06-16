@@ -15,7 +15,7 @@ items.forEach((item, index) => {
 
     const rad = angle * Math.PI / 180;
 
-    const radius = 600;
+    const radius = 450;
 
     const x = Math.sin(rad) * radius;
 
