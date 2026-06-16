@@ -21,12 +21,12 @@ items.forEach((item, index) => {
 
     const depth = Math.cos(rad);
 
-    const scale = 1.30 + ((depth + 1) / 2) * 0.65;
+    const brightness = 0.75 + ((depth + 1) / 2) * 0.25;
 
     const opacity = 0.15 + ((depth + 1) / 2) * 0.85;
 
-    const brightness = 1.12 + ((depth + 1) / 2) * 0.55;
-
+    const brightness = 0.75 + ((depth + 1) / 2) * 0.25;
+    
     item.style.left = "50%";
     item.style.top = "50%";
 
