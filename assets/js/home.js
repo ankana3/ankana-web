@@ -21,7 +21,7 @@ items.forEach((item, index) => {
 
     const depth = Math.cos(rad);
 
-    const scale = 0.90 + ((depth + 1) / 2) * 0.40;
+    const scale = 0.85 + ((depth + 1) / 2) * 0.35;
 
     const opacity = 0.15 + ((depth + 1) / 2) * 0.85;
 
