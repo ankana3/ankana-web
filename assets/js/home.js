@@ -42,7 +42,7 @@ items.forEach((item, index) => {
 
     item.style.filter = `brightness(${brightness})`;
 
-    if (depth > 0.85) {
+    if (depth > 0.95) {
 
         item.classList.add('active-card');
 
