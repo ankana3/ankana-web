@@ -40,7 +40,10 @@ items.forEach((item, index) => {
 
     item.style.zIndex = Math.round(scale * 100);
 
-    item.style.filter = `brightness(${brightness})`;
+    item.style.filter = `
+brightness(${brightness})
+blur(${(1 - depth) * 1.5}px)
+`;
 
     if (depth > 0.95) {
 
