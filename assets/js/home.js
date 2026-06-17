@@ -90,7 +90,7 @@ item.addEventListener('mouseenter', () => {
 
     item.style.transform += " scale(1.12)";
 
-    item.style.filter = "brightness(1.15)";
+    item.style.filter = "brightness(1)";
 
 });
 
