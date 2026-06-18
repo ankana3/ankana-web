@@ -33,7 +33,7 @@ items.forEach((item, index) => {
     item.style.transform = `
     translate(-50%, -50%)
     translateX(${x}px)
-    rotateY(${-x * 0.03}deg)
+    rotateY(${-x * 0.08}deg)
     scale(${scale})
 `;
 
