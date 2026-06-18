@@ -23,7 +23,7 @@ items.forEach((item, index) => {
 
     const scale = 0.85 + ((depth + 1) / 2) * 0.35;
 
-    const opacity = 0.15 + ((depth + 1) / 2) * 0.85;
+    const opacity = 0.05 + ((depth + 1) / 2) * 0.95;
 
     const brightness = 0.75 + ((depth + 1) / 2) * 0.25;
     
