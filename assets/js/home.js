@@ -11,7 +11,7 @@ function updateCarousel() {
 
     items.forEach((item, index) => {
 
-        const angle = const angle = ((360 / total) * index) + rotation - 10;
+        const angle = ((360 / total) * index) + rotation - 10;
 
         const rad = angle * Math.PI / 180;
 
