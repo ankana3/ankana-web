@@ -7,96 +7,102 @@ let paused = false;
 
 function updateCarousel() {
 
-const total = items.length;
+    const total = items.length;
 
-items.forEach((item, index) => {
+    items.forEach((item, index) => {
 
-    const angle = ((360 / total) * index) + rotation;
+        const angle = ((360 / total) * index) + rotation;
 
-    const rad = angle * Math.PI / 180;
+        const rad = angle * Math.PI / 180;
 
-    const radius = 450;
+        const radius = 450;
 
-    const x = Math.sin(rad) * radius;
+        const x = Math.sin(rad) * radius;
 
-    const depth = Math.cos(rad);
+        const depth = Math.cos(rad);
 
-    const scale = 0.85 + ((depth + 1) / 2) * 0.35;
+        const scale = 0.85 + ((depth + 1) / 2) * 0.35;
 
-    const opacity = 0.05 + ((depth + 1) / 2) * 0.95;
+        const opacity = 0.05 + ((depth + 1) / 2) * 0.95;
 
-    const brightness = 0.75 + ((depth + 1) / 2) * 0.25;
-    
-    item.style.left = "50%";
-    item.style.top = "50%";
+        const brightness = 0.75 + ((depth + 1) / 2) * 0.25;
 
-    item.style.transform += `
-    translate(-50%, -50%)
-    translateX(${x}px)
-    rotateY(${-x * 0.08}deg)
-    scale(1.05)";
-`;
+        item.style.left = "50%";
+        item.style.top = "50%";
 
-    item.style.opacity = opacity;
+        item.style.transform = `
+            translate(-50%, -50%)
+            translateX(${x}px)
+            rotateY(${-x * 0.08}deg)
+            scale(${scale})
+        `;
 
-    item.style.zIndex = Math.round(scale * 100);
+        item.style.opacity = opacity;
 
-    item.style.filter = `
-brightness(${brightness})
-blur(${(1 - depth) * 1.5}px)
-`;
+        item.style.zIndex = Math.round(scale * 100);
 
-    if (depth > 0.95) {
+        item.style.filter = `
+            brightness(${brightness})
+            blur(${(1 - depth) * 1.5}px)
+        `;
 
-        item.classList.add('active-card');
+        if (depth > 0.95) {
 
-    } else {
+            item.classList.add('active-card');
 
-        item.classList.remove('active-card');
+        } else {
 
-    }
+            item.classList.remove('active-card');
 
-});
+        }
+
+    });
 
 }
 
 function animate() {
 
-if (!paused) {
+    if (!paused) {
 
-    rotation += 0.08;
+        rotation += 0.08;
 
-    updateCarousel();
+        updateCarousel();
 
-}
+    }
 
-requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
 
 }
 
 wrapper.addEventListener('mouseenter', () => {
 
-paused = true;
+    paused = true;
 
 });
 
 wrapper.addEventListener('mouseleave', () => {
 
-paused = false;
+    paused = false;
 
 });
 
 items.forEach(item => {
 
-item.addEventListener('mouseenter', () => {
+    item.addEventListener('mouseenter', () => {
 
-    if(!item.classList.contains('active-card')) return;
+        if (!item.classList.contains('active-card')) return;
 
-    item.style.zIndex = "999";
+        item.style.zIndex = "999";
 
-    item.style.transform += " scale(1.25)";
+        item.style.transform += " scale(1.08)";
 
-    item.style.filter = "brightness(1.05)";
+    });
+
+    item.addEventListener('mouseleave', () => {
+
+        updateCarousel();
+
+    });
 
 });
 
