@@ -90,19 +90,13 @@ items.forEach(item => {
 
 item.addEventListener('mouseenter', () => {
 
+    if(!item.classList.contains('active-card')) return;
+
     item.style.zIndex = "999";
 
-    item.style.transform += " scale(1.12)";
+    item.style.transform += " scale(1.25)";
 
-    item.style.filter = "brightness(1)";
-
-});
-
-item.addEventListener('mouseleave', () => {
-
-    updateCarousel();
-
-});
+    item.style.filter = "brightness(1.05)";
 
 });
 
