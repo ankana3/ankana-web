@@ -30,11 +30,11 @@ items.forEach((item, index) => {
     item.style.left = "50%";
     item.style.top = "50%";
 
-    item.style.transform = `
+    item.style.transform += `
     translate(-50%, -50%)
     translateX(${x}px)
     rotateY(${-x * 0.08}deg)
-    scale(${scale})
+    scale(1.05)";
 `;
 
     item.style.opacity = opacity;
