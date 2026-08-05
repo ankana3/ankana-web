@@ -115,3 +115,25 @@ items.forEach(item => {
 
 updateCarousel();
 animate();
+
+items.forEach(item=>{
+
+    const img = item.querySelector("img");
+
+    img.addEventListener("mouseenter",()=>{
+
+        if(!item.classList.contains("active-card")) return;
+
+        activateMagnifier(img);
+
+    });
+
+    img.addEventListener("mousemove",moveMagnifier);
+
+    img.addEventListener("mouseleave",()=>{
+
+        deactivateMagnifier();
+
+    });
+
+});
