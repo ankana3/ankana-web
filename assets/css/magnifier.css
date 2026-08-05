@@ -51,7 +51,6 @@ inset:0;
 border-radius:50%;
 
 background:
-
 linear-gradient(
 135deg,
 rgba(255,255,255,.40) 0%,
@@ -69,4 +68,14 @@ opacity:1;
 
 transform:translate(-50%,-50%) scale(1);
 
+}
+
+/* Oculta el cursor cuando la lupa está activa */
+
+body.magnifier-active,
+body.magnifier-active *{
+
+cursor:none !important;
+
+}
 }
