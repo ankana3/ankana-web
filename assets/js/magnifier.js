@@ -1,5 +1,5 @@
 /* ==========================================
-   ANKANA MAGNIFIER v1.0
+   ANKANA MAGNIFIER v1.1
 ========================================== */
 
 const magnifier = document.createElement("div");
@@ -20,6 +20,8 @@ function activateMagnifier(img){
 
     magnifier.classList.add("visible");
 
+    document.body.classList.add("magnifier-active");
+
 }
 
 function deactivateMagnifier(){
@@ -27,6 +29,8 @@ function deactivateMagnifier(){
     activeImage = null;
 
     magnifier.classList.remove("visible");
+
+    document.body.classList.remove("magnifier-active");
 
 }
 
