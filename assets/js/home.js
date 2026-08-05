@@ -15,17 +15,24 @@ function updateCarousel() {
 
         const rad = angle * Math.PI / 180;
 
-        const radius = 450;
+        const radius = 420;
 
         const x = Math.sin(rad) * radius;
 
         const depth = Math.cos(rad);
 
-        const scale = 0.85 + ((depth + 1) / 2) * 0.35;
+        // Curva de profundidad
+        const focus = Math.pow((depth + 1) / 2, 2.8);
 
-        const opacity = 0.05 + ((depth + 1) / 2) * 0.95;
+        const scale = 0.78 + (focus * 0.42);
 
-        const brightness = 0.75 + ((depth + 1) / 2) * 0.25;
+        const opacity = 0.10 + (focus * 0.90);
+
+        const brightness = 0.60 + (focus * 0.40);
+
+        const blur = (1 - focus) * 3;
+
+        const rotate = -x * 0.11;
 
         item.style.left = "50%";
         item.style.top = "50%";
@@ -33,20 +40,20 @@ function updateCarousel() {
         item.style.transform = `
             translate(-50%, -50%)
             translateX(${x}px)
-            rotateY(${-x * 0.08}deg)
+            rotateY(${rotate}deg)
             scale(${scale})
         `;
 
         item.style.opacity = opacity;
 
-        item.style.zIndex = Math.round(scale * 100);
+        item.style.zIndex = Math.round(focus * 1000);
 
         item.style.filter = `
             brightness(${brightness})
-            blur(${(1 - depth) * 1.5}px)
+            blur(${blur}px)
         `;
 
-        if (depth > 0.95) {
+        if (focus > 0.90) {
 
             item.classList.add('active-card');
 
@@ -92,9 +99,9 @@ items.forEach(item => {
 
         if (!item.classList.contains('active-card')) return;
 
-        item.style.zIndex = "999";
+        item.style.zIndex = "9999";
 
-        item.style.transform += " scale(1.08)";
+        item.style.transform += " scale(1.12)";
 
     });
 
