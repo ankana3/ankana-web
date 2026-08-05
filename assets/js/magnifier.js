@@ -1,5 +1,5 @@
 /* ==========================================
-   ANKANA MAGNIFIER v2.0
+   ANKANA MAGNIFIER v2.1
 ========================================== */
 
 const magnifier = document.createElement("div");
@@ -46,24 +46,29 @@ function moveMagnifier(e){
     let x = e.clientX - rect.left;
     let y = e.clientY - rect.top;
 
-    // Limita la lupa para que nunca salga de la fotografía
+    // Coordenadas reales del cursor (para el zoom)
 
-    x = Math.max(HALF_LENS / ZOOM, Math.min(x, rect.width - HALF_LENS / ZOOM));
-    y = Math.max(HALF_LENS / ZOOM, Math.min(y, rect.height - HALF_LENS / ZOOM));
+    const zoomX = x;
+    const zoomY = y;
+
+    // Margen para que la lupa nunca sobresalga visualmente
+
+    const margin = HALF_LENS;
+
+    x = Math.max(margin, Math.min(x, rect.width - margin));
+    y = Math.max(margin, Math.min(y, rect.height - margin));
 
     // Posición de la lupa
 
     magnifier.style.left = `${rect.left + window.scrollX + x}px`;
     magnifier.style.top = `${rect.top + window.scrollY + y}px`;
 
-    // Tamaño del fondo
+    // Imagen ampliada
 
     magnifier.style.backgroundSize =
         `${rect.width * ZOOM}px ${rect.height * ZOOM}px`;
 
-    // Desplazamiento del fondo
-
     magnifier.style.backgroundPosition =
-        `-${x * ZOOM - HALF_LENS}px -${y * ZOOM - HALF_LENS}px`;
+        `-${zoomX * ZOOM - HALF_LENS}px -${zoomY * ZOOM - HALF_LENS}px`;
 
 }
