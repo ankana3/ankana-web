@@ -126,13 +126,19 @@ padding:0 8% 100px;
 
 }
 
-.intro-container{
+.intro-container p{
 
-max-width:950px;
+max-width:900px;
 
 margin:0 auto;
 
-text-align:center;
+font-size:1.08rem;
+
+line-height:2;
+
+color:#5b4537;
+
+text-align:justify;
 
 }
 
