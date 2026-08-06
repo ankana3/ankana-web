@@ -213,10 +213,10 @@ box-shadow .45s ease;
 
 .editorial-card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-12px);
 
 box-shadow:
-0 30px 70px rgba(43,30,24,.18);
+0 38px 80px rgba(43,30,24,.26);
 
 }
 
